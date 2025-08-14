@@ -552,9 +552,8 @@ function showQuestion() {
     questionTextElement.textContent = currentQuiz.question;
 
     optionsContainer.innerHTML = '';
-    // 選択肢をランダムに並び替える
-    const shuffledOptions = [...currentQuiz.options].sort(() => Math.random() - 0.5);
-    shuffledOptions.forEach(option => {
+    // 選択肢は元の順番（A, B, C）で表示
+    currentQuiz.options.forEach(option => {
         const button = document.createElement('button');
         button.classList.add('option-button');
         button.textContent = option;
@@ -591,7 +590,6 @@ answerButton.addEventListener('click', () => {
 
     // 選択肢の正解/不正解を判定
     optionsContainer.childNodes.forEach(button => {
-        // ここでtextContentを比較
         if (button.textContent === currentQuiz.answer) {
             button.classList.add('correct');
         } else if (button === selectedOption) {
