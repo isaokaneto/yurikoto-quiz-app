@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゆりことかるたクイズ</title>
+    <!-- アプリの見た目を定義するCSSファイル -->
+    <link rel="stylesheet" href="style.css">
+    <!-- フォントの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <!-- フォントアイコン（花） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- クイズ全体を囲むコンテナ -->
+    <div class="quiz-container">
+        <!-- クイズのタイトル -->
+        <h1 class="quiz-title">ゆりことかるたクイズ <i class="fa-solid fa-leaf text-green-500"></i><i class="fa-solid fa-seedling text-green-500"></i></h1>
+        
+        <!-- 問題画面 -->
+        <div id="quiz-screen">
+            <p id="question-number"></p>
+            <p id="question-text"></p>
+            <div id="options-container" class="options-container">
+                <button class="option-button"></button>
+                <button class="option-button"></button>
+                <button class="option-button"></button>
+            </div>
+            <button id="answer-button" class="action-button">回答する</button>
+        </div>
+        
+        <!-- 結果画面 (最初は非表示) -->
+        <div id="result-screen" class="hidden">
+            <h2 id="result-text"></h2>
+            <p id="correct-answer"></p>
+            <p id="explanation"></p>
+            <button id="next-button" class="action-button">次の問題へ</button>
+        </div>
+    </div>
+    
+    <!-- アプリの動きを定義するJavaScriptファイル -->
+    <script src="script.js"></script>
+</body>
+</html>
